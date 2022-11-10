@@ -1,0 +1,1 @@
+This repository redirects pages from the archived Birdwatch documentation (eg. https://twitter.github.io/birdwatch/), to its new namespace "Community Notes" (eg. https://twitter.github.io/communitynotes/).
