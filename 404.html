@@ -6,7 +6,13 @@
     <script>
       // Extract the requested path from the URL and remove the "/birdwatch/" subdirectory
       var requestedPath = window.location.pathname.replace(/^\/birdwatch/, "");
-
+      
+      // If the requested path is root, redirect to root of new site
+      if (window.location.pathname === '/birdwatch/') {
+          window.location.replace(
+          "https://communitynotes.twitter.com/guide")
+      }
+      
       // If the requested path ends in ".html", remove the extension
       if (requestedPath.match(/\.html$/)) {
         requestedPath = requestedPath.replace(/\.html$/, "");
