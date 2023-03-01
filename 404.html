@@ -5,10 +5,7 @@
     <title>Redirecting to new domain</title>
     <script>
       // Extract the requested path from the URL and remove the "/birdwatch/" subdirectory
-      var requestedPath = window.location.pathname.replace(
-        /^\/birdwatch/,
-        ""
-      );
+      var requestedPath = window.location.pathname.replace(/^\/birdwatch/, "");
 
       // If the requested path ends in ".html", remove the extension
       if (requestedPath.match(/\.html$/)) {
@@ -81,16 +78,16 @@
       // Find alias in object, or alias minus a trailing slash
       if (aliases[requestedPath]) {
         window.location.replace(
-          "https://twitter.github.io/communitynotes" + aliases[requestedPath]
+          "https://communitynotes.twitter.com/guide" + aliases[requestedPath]
         );
       } else if (aliases[requestedPath.slice(0, -1)]) {
         window.location.replace(
-          "https://twitter.github.io/communitynotes" +
+          "https://communitynotes.twitter.com/guide" +
             aliases[requestedPath.slice(0, -1)]
         );
       } else {
         window.location.replace(
-          "https://twitter.github.io/communitynotes" + requestedPath
+          "https://communitynotes.twitter.com/guide" + requestedPath
         );
       }
     </script>
